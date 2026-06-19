@@ -31,22 +31,22 @@
             </ul>
         </nav>
         <div class = "flex-container" >
-            <img height="250px" width="300px" src="images/IMG_5202 2.JPG">
+            <img class = "profile-image" src="images/Tochi_img.JPG">
             <div class = "text-container" >
                 <h1> Hey, Tochi Here!</h1>
                     <p>I’m an aspiring <strong> Software/Machine Learning Engineering</strong> documenting my Journey Publicly.
                             I did my Undergraduate in Electronic Engineering at the University of Southampton and
                             currently I'm doing my Masters in Computer Science at University of Edinburgh. My Intrests lie between the intersection of ML & hardware such as <strong>Custom AI accelerators and ML compilers</strong>.</p>
-                    <a href="# My projects" class="cta-button"> See my work</a>      
-                    <a href="https://www.youtube.com/@TochiBuildz" class="cta-button secondary"> Follow me</a>    
+                    <a href="#projects" class="cta-button"> See my work</a>      
+                    <a href="#contact" class="cta-button secondary"> Contact me</a>    
             </div>
         <div> 
     </header>
 
-    <section>
-        <div class="flex-container">
+    <section id="projects">
             <div class="skills-container" >
                 <h1> Skills</h1>
+                <img class="skill-logo" src="images/logos/logo-python.svg" alt="python logo">
                 <img class="skill-logo" src="images/logos/c-plus-plus.svg" alt="c++ logo">
                 <img class="skill-logo" src="images/logos/logo-python.svg" alt="python logo">
                 <img class="skill-logo-sv" src="images/logos/systemverilog.svg" alt="system verilog">
@@ -54,15 +54,91 @@
                 <img class="skill-logo" src="images/logos/html-logo.svg" alt="html logo">
                 <img class="skill-logo-cs" src="images/logos/css-logo.svg"alt="css logo">
             </div>
-            <div class="text-container" >
-                <h1> Projects</h1>
+            <div class="projects-container" >
+                <h1 class ="Software-project-title" > Software Projects</h1>
+                    <div class="project-grid">
+                        <div class="project-card" >
+                            <h2>Tochi's Portfolio V1 (HTML & CSS) </h2>
+                                <P> The first iteration of my personal website written in html and css only. A simply hobby project to bring me into the world
+                                    of front-end engineering and UX/UI design. No AI assisted Coding used for this project.
+                                </P>
+                                <div class="project-tech">
+                                    <img class="project-logo" src="images/logos/html-logo.svg">
+                                    <img class="project-logo" src="images/logos/css-logo.svg">
+                                </div>
+                        </div>
+                        <div class="project-card" >
+                            <h2> Tiny Infer - ML Compiler & Runtime (C++)</h2>
+                                <P>
+                                    A from-scratch C++ machine learning inference engine and compiler-style runtime. TinyInfer loads model weights, executes core
+                                    neural-network layers, applies graph-level optimisations, and benchmarks performance against PyTorch to explore how production
+                                    ML inference systems are built under the hood.
+                                </P>
+                                <div class="project-tech">
+                                    <img class="project-logo" src="images/logos/c-plus-plus.svg">
+                                </div>
+                        </div>
+                        <div class="project-card" >
+                            <h2> Mips Pipeline Simulator (C++)</h2>
+                                <p> Implememted a cycle-accurate 5-stage pipelined CPU with hazard dection unit for forwarding and stalls
+                                    and 2-bit saturating Branch predictor to reduce control-hazards. Validated on test programs written in MIPS assembly with 
+                                the limited ISA. Addition of the Branch predictor reduced Average CPI from 1.25. to 1.11 as the number of stalls reduced from
+                                403 to 203 on the showcase program.
+                                </p>
+                                <div class="project-tech">
+                                    <img class="project-logo" src="images/logos/c-plus-plus.svg">
+                                </div>
+                        </div>
+                    </div>
+
+                <h1 class ="hardware-projects-title" > Hardware Projects</h1>
+                    <div class="project-grid">
+                        <div class ="project-card">
+                            <h2> Risc-V Sparse Matrix-Mul Accelerator (SV, C & Python)</h2>
+                            <p> Designed a custom Risc-v AI accelerator supporting ML workloads, vector instruction and ReLU extensions
+                                for efficient computation. Utilised DSP units on the FPGA to compute different rows of the matrix all in parralel and added runtime INT8 quantisation
+                                to reduce the Memory bandwidth bottle neck while maintaining it's precision. Achieved measured speed ups of up to 56.8x on a variety of sparse matrix workloads
+                                with different sizes, sparsity levels and patterns. and up to 11.92x speed up over the ARM cortex M0.
+                            </p>
+                            <div class="project-tech">
+                                <img class="project-logo" src="images/logos/systemverilog.svg">
+                                <img class="project-logo" src="images/logos/c-plus-plus.svg">
+                                <img class="project-logo" src="images/logos/logo-python.svg">
+                            </div>
+
+                        </div>
+                        <div class="project-card" >
+                            <h2> Group IC design & Test Project (SV)</h2>
+                                <p>This a Group project where i was responsible for design some circuits for a digital clock with provided requirements
+                                    such as a main sequencer, Button sequencer and Ring Oscillator.
+                                    EDA tools such as S-edit and L-edit where used to implement the circuit and LVS check were used to confirm not compatibility errors.
+                                    The GDSII file was sent to TSMC for Fabrication and after returned Custom Test Vectors were created to confirm there was no errors when
+                                    manufacturing the chip.
+                                </p>
+                                <div class="project-tech">
+                                    <img class="project-logo" src="images/logos/systemverilog.svg">
+                                </div>
+                        </div>
+                        <div class="project-card" >
+                            <h2> Embedded Networked System Smart Lighting Project (C )</h2>
+                                <p>This a Group project where i was responsible for designing Standard Network Architecture for both the Application
+                                    and transport layers of an Embedded device with an RF Transceiver. Design the Byte structure of the payload and it's segments,
+                                    determining what control functionality we want for the smart lighting application, which ports segments should arrive in and what
+                                    type of checksum to ensure the segments/packets weren't corrupted.
+                                </p>
+                                <div class="project-tech">
+                                    <img class="project-logo" src="images/logos/c-plus-plus.svg">
+                                </div>
+                        </div>
+                    </div>
             </div>
-            
         </div>
     </section>
-    <section>
+    <section id="contact">
          <div class="text-container" >
                 <h1> Contact me</h1>
+                    <p> I always check my messages, Let's talk!</p>
+                        
         </div>
     </section>
        
