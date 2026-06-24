@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    padding: 5em;
+    padding: clamp(1rem, 5vw, 5em);
     background-color: var(--base-color);
 }
 
@@ -55,7 +55,7 @@ nav ul {
     align-items: center ;
     list-style: none;
     gap: 1em;
-   
+    flex-wrap: wrap;
 }
 
 nav li:first-child {
@@ -100,7 +100,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 7em ;
+    gap: clamp(2em, 6vw, 7em);
     width: 100%;
 }
 
@@ -117,7 +117,7 @@ header img{
 }
 
 h1 {
-    font-size:2.5rem;
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
 }
 
 .text-container p{
@@ -155,8 +155,8 @@ h1 {
 }
 
 .skill-logo-sv{
-    width: auto rem;
-    height: auto rem;
+    width: 6rem;
+    height: 5rem;
     object-fit: contain;
 }
 
@@ -181,21 +181,22 @@ h1 {
 
 .profile-image{
     display: block;
-    width: 300px;
-    height: 250px;
+    width: min(300px, 80%);
+    height: auto;
+    aspect-ratio: 6 / 5;
     object-fit: cover;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8em;
+    margin-top: clamp(2em, 8vw, 8em);
     border-radius: 1rem;
 }
 
 .projects-container{
-    margin-top: 8rem;
+    margin-top: clamp(3rem, 10vw, 8rem);
 }
 
 .hardware-projects-title{
-    margin-top: 7rem;
+    margin-top: clamp(3rem, 8vw, 7rem);
 }
 
 .project-grid {
@@ -255,20 +256,21 @@ h1 {
 }
 
 h3 {
-    font-family : Merriweather; 
-    font-size: 3em;
+    font-family : Merriweather;
+    font-size: clamp(1.75rem, 7vw, 3em);
     font-weight: bold;
     color: var(--text-color);
 }
 
 .contact-message{
-    margin-top: 6em;
-    font-size:xx-large ;
+    margin-top: clamp(2em, 8vw, 6em);
+    font-size: clamp(1.25rem, 5vw, 2rem);
     font-weight: bold ;
+    text-align: center;
 }
 
 .contact-plane{
-    margin-top: 3em;
+    margin-top: clamp(1.5em, 5vw, 3em);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -276,7 +278,8 @@ h3 {
 }
 .contact-info{
     font-weight:500;
-    font-size: x-large;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    word-break: break-word;
 }
 
 .contact-form{
@@ -323,4 +326,59 @@ h3 {
     color: white;
     font-family: Merriweather, sans-serif;
     font-weight: bold;
+}
+
+/* ---- Mobile (phones & small tablets) ---- */
+@media (max-width: 600px) {
+    /* Stack the name/email row vertically */
+    .form-row{
+        flex-direction: column;
+    }
+
+    /* CTA buttons: full-width, stacked, no awkward left margin */
+    .cta-button{
+        display: block;
+        margin-left: 0;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    /* Cards don't need to be so tall on a phone */
+    .project-card{
+        min-height: auto;
+    }
+
+    /* Keep the project tech logos from getting oversized */
+    .project-logo{
+        width: 3rem;
+        height: 3rem;
+    }
+    .verilog-project-logo{
+        width: 5rem;
+        height: 5rem;
+    }
+    .css-project-logo{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    /* Skill logos a touch smaller so the row wraps neatly */
+    .skill-logo{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .skill-logo-cs{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* Make tapping social icons comfortable, keep them on one row */
+    .nav-logo{
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    .youtube-logo{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }
