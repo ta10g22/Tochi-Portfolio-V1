@@ -207,6 +207,7 @@ h1 {
 }
 
 .project-card {
+    position: relative;
     border-radius: 1rem;
     background-color: #000000;
     padding: clamp(2rem, 5vw, 4rem);
@@ -214,8 +215,13 @@ h1 {
     min-height: 32rem;
     display: flex;
     flex-direction: column;
-    
 
+
+}
+
+/* Reserve space so long titles don't run under the GitHub link */
+.project-card h2 {
+    padding-right: 3rem;
 }
 .project-card:hover{
     transform: scale(1.005);
@@ -228,6 +234,28 @@ h1 {
     gap: 1rem;
     align-items: center;
     padding-top: 2rem;
+}
+
+.project-github {
+    position: absolute;
+    top: clamp(1.5rem, 3vw, 2.25rem);
+    right: clamp(1.5rem, 3vw, 2.25rem);
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.project-github:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 0.4rem var(--secondary-color));
+}
+
+.project-github img {
+    width: 2.75rem;
+    height: 2.75rem;
+    object-fit: contain;
+    /* Force the icon to render white on the dark card */
+    filter: brightness(0) invert(1);
 }
 
 .project-logo {
