@@ -172,7 +172,7 @@ h1 {
     transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.youtube-logo{
+.email-logo{
     width: 3.5rem;
     height: 3.5rem;
     object-fit: contain;
@@ -400,12 +400,12 @@ h3 {
         height: 4rem;
     }
 
-    /* Make tapping social icons comfortable, keep them on one row */
+    /* Make tapping navigation icons comfortable, keep them on one row */
     .nav-logo{
         width: 2.25rem;
         height: 2.25rem;
     }
-    .youtube-logo{
+    .email-logo{
         width: 2.5rem;
         height: 2.5rem;
     }
