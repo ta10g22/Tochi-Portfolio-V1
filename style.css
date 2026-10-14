@@ -1,412 +1,465 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-
 :root {
-  --base-color: #000000;
-  --text-color: #ffffff;
-  --primary-color: #000000;
-  --secondary-color: #ff0000;
-  --color-1: #f9f6f3;
-  --color-2: #f3f7f9;
-  --color-3: #242325;
-}
-
-
-* {
-    margin : 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-family : quicksand , sans-serif ;
+    color-scheme: dark;
+    --base-color: #000000;
+    --panel-color: #242222;
+    --text-color: #ffffff;
+    --muted-color: #c9c5c5;
+    --accent-color: #ff3030;
+    font-family: "Quicksand", system-ui, sans-serif;
     color: var(--text-color);
+    background: var(--base-color);
     scroll-behavior: smooth;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
-    padding: clamp(1rem, 5vw, 5em);
-    background-color: var(--base-color);
+    margin: 0;
+    padding: clamp(1rem, 4vw, 3.5rem);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Merriweather", Georgia, serif;
+    line-height: 1.3;
+    text-wrap: balance;
 }
 
 h1 {
-    font-family : Merriweather; sans-serif;
-    color: var(--text-color);
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
 h2 {
-    font-family : Merriweather; sans-serif;
-    font-size: larger;
-    font-weight: bold;
-    color: var(--text-color);
-    margin-bottom: 1em ;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-nav {
-    margin: 1em auto 3em auto;
-    width: min(10000px, 100%);
-    color: var(--secondary-colorr);
+h3 {
+    font-size: 1.125rem;
 }
 
-
-nav ul {
-    display: flex ;
-    align-items: center ;
-    list-style: none;
-    gap: 1em;
-    flex-wrap: wrap;
+a {
+    color: inherit;
+    text-underline-offset: 0.25em;
 }
 
-nav li:first-child {
-    margin-right:auto;
-    font-weight: bold;
-
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-nav a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--primary-color);
-    padding: .5em .5em;
-    border-radius: .5em;
+button, input, textarea {
+    font: inherit;
 }
 
-nav a:hover{
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 0.4rem var(--secondary-color));
+:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 5px;
 }
 
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: 1;
+    padding: 0.75rem 1rem;
+    background: var(--text-color);
+    color: var(--base-color);
+    transform: translateY(-150%);
+}
 
-header, section{
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+header, section {
     width: min(75rem, 100%);
-    margin: 3rem auto;
-    padding: clamp(2rem, 5vw, 4rem);
-    background-color: #242222;
-    border-radius: 1rem; 
-    
-}
-
-header {
-    height: auto;
-    min-height: unset;
+    margin: 0 auto clamp(1.25rem, 3vw, 2rem);
+    padding: clamp(1.25rem, 4vw, 3rem);
+    background: var(--panel-color);
+    border-radius: 1.25rem;
 }
 
 section {
-    min-height: 80vh;
+    scroll-margin-top: 1.5rem;
 }
 
-.flex-container{
+nav {
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+nav ul {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: clamp(2em, 6vw, 7em);
-    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
 }
 
-header img{
-    max-width: 100%;
-    border-radius: 1em ;
+.nav-link, .project-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 0.5rem;
+    transition: background-color 160ms ease;
+}
+
+nav img, .nav-logo {
+    width: 32px;
+    height: 32px;
+    max-width: 32px;
+    object-fit: contain;
+}
+
+.nav-link:hover, .project-github:hover {
+    background: #ffffff12;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.profile-image {
+    width: min(200px, 100%);
+    height: auto;
+    aspect-ratio: 6 / 5;
+    margin-inline: auto;
+    border-radius: 1rem;
     object-fit: cover;
     object-position: center;
 }
 
 .text-container {
-    width: 100%;
-    max-width: 65rem;
+    min-width: 0;
 }
 
-h1 {
-    font-size: clamp(1.75rem, 6vw, 2.5rem);
+.text-container p {
+    margin-top: 1rem;
+    color: var(--muted-color);
 }
 
-.text-container p{
-    margin: .75em 0  1em 0;
-    font-size: 1rem;
+strong {
+    color: var(--text-color);
+    font-weight: 700;
 }
 
-.cta-button{
-    margin-top: 2em;
-    display: inline-block;
-    font-family: Merriweather;
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    color: var(--base-color);
+    background: var(--accent-color);
+    font-weight: 700;
+    line-height: 1.4;
     text-decoration: none;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    padding: .5em 1em;
-    border-radius: 1em;
+    cursor: pointer;
+    transition: background-color 160ms ease;
+}
+
+.cta-button:hover {
+    background: #ff6060;
+}
+
+.cta-button.secondary {
+    color: var(--text-color);
+    background: transparent;
+    border-color: #716969;
+}
+
+.cta-button.secondary:hover {
+    background: #ffffff12;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 1.5rem;
+    margin-top: 1.75rem;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 6.5rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    margin-left: 1em;
-}
-.cta-button-text:hover{
-    transform: scale(1.09);
-    filter: drop-shadow(0 0 0.9rem var(--primary-color));
 }
 
-
-.skills-container{
-      flex: 0 1 100em;
-      
+.skills-container img {
+    width: 56px;
+    height: 56px;
 }
 
-.skill-logo{
-    width: 5rem;
-    height: 5rem;
-    object-fit: contain;
-}
-
-.skill-logo-sv{
-    width: 6rem;
-    height: 5rem;
-    object-fit: contain;
-}
-
-.skill-logo-cs{
-    height: 5.5rem;
-    width: 6rem;
-}
-
-.nav-logo{
-    width: 3rem;
-    height: 3rem;
-    object-fit: contain;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.email-logo{
-    width: 3.5rem;
-    height: 3.5rem;
-    object-fit: contain;
-
-}
-
-.profile-image{
-    display: block;
-    width: min(300px, 80%);
-    height: auto;
-    aspect-ratio: 6 / 5;
-    object-fit: cover;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: clamp(2em, 8vw, 8em);
-    border-radius: 1rem;
-}
-
-.projects-container{
-    margin-top: clamp(3rem, 10vw, 8rem);
-}
-
-.hardware-projects-title{
-    margin-top: clamp(3rem, 8vw, 7rem);
+.skills-container .wide-logo {
+    width: 80px;
 }
 
 .project-grid {
-    margin-top: 2em;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
 }
 
 .project-card {
-    position: relative;
-    border-radius: 1rem;
-    background-color: #000000;
-    padding: clamp(2rem, 5vw, 4rem);
-    flex: 1 1 20rem;
-    min-height: 32rem;
     display: flex;
     flex-direction: column;
-
-
+    min-width: 0;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    background: var(--base-color);
+    border: 1px solid #ffffff10;
+    border-radius: 1rem;
 }
 
-/* Reserve space so long titles don't run under the GitHub link */
-.project-card h2 {
-    padding-right: 3rem;
-}
-.project-card:hover{
-    transform: scale(1.005);
-    filter: drop-shadow(0 0 0.4rem var(--secondary-color));
-}
-
-.project-tech {
-    margin-top: auto;
+.project-heading {
     display: flex;
-    gap: 1rem;
-    align-items: center;
-    padding-top: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.project-heading h3 {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .project-github {
-    position: absolute;
-    top: clamp(1.5rem, 3vw, 2.25rem);
-    right: clamp(1.5rem, 3vw, 2.25rem);
-    display: inline-flex;
-    align-items: center;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.project-github:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 0.4rem var(--secondary-color));
+    margin-top: -0.375rem;
+    margin-right: -0.375rem;
 }
 
 .project-github img {
-    width: 2.75rem;
-    height: 2.75rem;
-    object-fit: contain;
-    /* Force the icon to render white on the dark card */
+    width: 28px;
+    height: 28px;
     filter: brightness(0) invert(1);
 }
 
-.project-logo {
-    width: 4rem;
-    height: 4rem;
-    object-fit: contain;
+.project-card p {
+    color: var(--muted-color);
+    overflow-wrap: anywhere;
 }
 
-.verilog-project-logo{
-    width: 7rem;
-    height: 7rem;
-    object-fit: contain;
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
 }
 
-.css-project-logo{
-    width: 4.5rem;
-    height: 4.5rem;
-    object-fit: contain;
-} 
+.project-tech img {
+    width: 40px;
+    height: 40px;
+}
 
-.contact-container{
+.project-tech .wide-logo {
+    width: 72px;
+}
+
+.hardware-projects-title {
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+}
+
+.contact-details {
+    min-width: 0;
+}
+
+.contact-message {
+    margin: 1rem 0 1.5rem;
+    color: var(--muted-color);
+}
+
+.contact-plane {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+    margin-top: 0.75rem;
+    text-decoration: none;
+}
+
+.contact-plane img {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+}
+
+.contact-plane span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+a.contact-plane:hover span {
+    text-decoration: underline;
+}
+
+.contact-form, .form-field {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    gap: 0.5rem;
+    min-width: 0;
 }
 
-h3 {
-    font-family : Merriweather;
-    font-size: clamp(1.75rem, 7vw, 3em);
-    font-weight: bold;
-    color: var(--text-color);
-}
-
-.contact-message{
-    margin-top: clamp(2em, 8vw, 6em);
-    font-size: clamp(1.25rem, 5vw, 2rem);
-    font-weight: bold ;
-    text-align: center;
-}
-
-.contact-plane{
-    margin-top: clamp(1.5em, 5vw, 3em);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contact-form {
     gap: 1rem;
 }
-.contact-info{
-    font-weight:500;
-    font-size: clamp(1rem, 4vw, 1.5rem);
-    word-break: break-word;
+
+.form-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
 }
 
-.contact-form{
-    margin-top: 2em;
-    width: min(35rem, 100%);
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+.form-field label {
+    font-size: 0.875rem;
+    font-weight: 600;
 }
 
-.form-row{
-    display: flex;
-    gap: 0.75rem;   
-}
-
-.contact-form input,
-.contact-form text {
+.contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 1em;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #000000;
-    color: white;
-    font-family: Quicksand, sans-serif;
-    font-weight: bold;
+    min-width: 0;
+    padding: 0.875rem 1rem;
+    border: 1px solid #716969;
+    border-radius: 0.625rem;
+    color: var(--text-color);
+    background: var(--base-color);
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.contact-form textarea{
-    min-height: 8rem;
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #aaa5a5;
+    opacity: 1;
+}
+
+.contact-form textarea {
+    min-height: 9rem;
     resize: vertical;
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 0.1rem;
-    font-family: Quicksand, sans-serif;
-    font-weight: bold;
-
-}
-.contact-form button{
-    padding: 1em;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #000000;
-    color: white;
-    font-family: Merriweather, sans-serif;
-    font-weight: bold;
 }
 
-/* ---- Mobile (phones & small tablets) ---- */
-@media (max-width: 600px) {
-    /* Stack the name/email row vertically */
-    .form-row{
+.form-note {
+    color: var(--muted-color);
+    font-size: 0.875rem;
+}
+
+footer {
+    padding: 0.5rem 0 1rem;
+    text-align: center;
+    color: var(--muted-color);
+    font-size: 0.875rem;
+}
+
+@media (min-width: 600px) {
+    .form-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.5fr);
+        gap: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .profile-image {
+        width: min(300px, 100%);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1000px) {
+    .contact-container {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 479px) {
+    .hero-actions {
         flex-direction: column;
     }
 
-    /* CTA buttons: full-width, stacked, no awkward left margin */
-    .cta-button{
-        display: block;
-        margin-left: 0;
-        margin-top: 1em;
-        text-align: center;
+    .hero-actions .cta-button {
+        width: 100%;
     }
 
-    /* Cards don't need to be so tall on a phone */
-    .project-card{
-        min-height: auto;
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem 0.5rem;
     }
 
-    /* Keep the project tech logos from getting oversized */
-    .project-logo{
-        width: 3rem;
-        height: 3rem;
-    }
-    .verilog-project-logo{
-        width: 5rem;
-        height: 5rem;
-    }
-    .css-project-logo{
-        width: 3.5rem;
-        height: 3.5rem;
+    .skills-container li {
+        width: auto;
+        font-size: 0.75rem;
     }
 
-    /* Skill logos a touch smaller so the row wraps neatly */
-    .skill-logo{
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-    .skill-logo-cs{
-        width: 4rem;
-        height: 4rem;
+    .skills-container img {
+        width: 44px;
+        height: 44px;
     }
 
-    /* Make tapping navigation icons comfortable, keep them on one row */
-    .nav-logo{
-        width: 2.25rem;
-        height: 2.25rem;
+    .skills-container .wide-logo {
+        width: 64px;
     }
-    .email-logo{
-        width: 2.5rem;
-        height: 2.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition: none;
     }
 }

@@ -3,173 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👨🏾‍💻 Tochi </title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Tochi Anyanwu's portfolio of software, machine learning, embedded systems, and digital hardware projects.">
+    <meta name="theme-color" content="#000000">
+    <title>Tochi Anyanwu | Software &amp; Hardware Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20261014-2">
+    <script src="site.js?v=20261014-2" defer></script>
 </head>
-
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
-        <nav>
+        <nav aria-label="Contact and GitHub">
             <ul>
-                <li><a href="tochipartnerships@gmail.com" > 
-                    <img class="email-logo" src="images/skills_logos/email-logo.svg" alt="email-logo">
-                </a>
+                <li>
+                    <a class="nav-link" href="mailto:tochipartnerships@gmail.com" aria-label="Email Tochi">
+                        <img class="nav-logo" src="images/skills_logos/email-logo.svg" alt="" width="32" height="32">
+                    </a>
                 </li>
-                <li><a href="https://github.com/ta10g22" >
-                    <img class="nav-logo" src="images/skills_logos/github-logo.svg">
-                </a></li>
+                <li>
+                    <a class="nav-link" href="https://github.com/ta10g22" aria-label="Tochi on GitHub">
+                        <img class="nav-logo" src="images/skills_logos/github-logo.svg" alt="" width="32" height="32">
+                    </a>
+                </li>
             </ul>
         </nav>
-        <div class = "flex-container" >
-            <img class = "profile-image" src="images/Tochi_img.JPG">
-            <div class = "text-container" >
-                <h1> Hey, Tochi Here!</h1>
-                    <p>I’m an aspiring <strong> Software/Machine Learning Engineering</strong> documenting my Journey Publicly.
-                            I did my Undergraduate in Electronic Engineering at the University of Southampton and
-                            currently I'm doing my Masters in Computer Science at University of Edinburgh. My Intrests lie between the intersection of ML & hardware such as <strong>Custom AI accelerators and ML compilers</strong>.</p>
-                    <a href="#projects" class="cta-button">
-                        <p class="cta-button-text ">  See my work</p>
-                    </a>      
-                    <a href="#contact" class="cta-button secondary">
-                        <p class="cta-button-text ">  Contact me</p>
-                    </a>    
+        <div class="flex-container">
+            <img class="profile-image" src="images/Tochi_img.JPG" alt="Tochi Anyanwu" width="300" height="250" fetchpriority="high">
+            <div class="text-container">
+                <h1>Hey, Tochi here!</h1>
+                <p>I’m an aspiring <strong>software and machine learning engineer</strong> documenting my journey publicly. I studied Electronic Engineering at the University of Southampton and I’m currently doing my master’s in Computer Science at the University of Edinburgh.</p>
+                <p>My interests lie at the intersection of ML and hardware, including <strong>custom AI accelerators and ML compilers</strong>.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="cta-button">See my work</a>
+                    <a href="#contact" class="cta-button secondary">Contact me</a>
+                </div>
             </div>
-        <div> 
+        </div>
     </header>
 
-    <section id="projects">
-            <div class="skills-container" >
-                <h1> Skills</h1>
-                <img class="skill-logo" src="images/skills_logos/logo-python.svg" alt="python logo">
-                <img class="skill-logo" src="images/skills_logos/c-plus-plus.svg" alt="c++ logo">
-                <img class="skill-logo" src="images/skills_logos/c-logo.svg" alt="C logo">
-                <img class="skill-logo-sv" src="images/skills_logos/systemverilog.svg" alt="system verilog">
-                <img class="skill-logo" src="images/skills_logos/git-icon.svg" alt="git icon">
-                <img class="skill-logo" src="images/skills_logos/html-logo.svg" alt="html logo">
-                <img class="skill-logo-cs" src="images/skills_logos/css-logo.svg"alt="css logo">
-            </div>
-            <div class="projects-container" >
-                <h1 class ="Software-project-title" > Software Projects</h1>
-                    <div class="project-grid">
-                        <div class="project-card" >
-                            <h2>Tochi's Portfolio V1 (HTML & CSS) </h2>
-                                <P> The first iteration of my personal website written in html and css only. A simply hobby project to bring me into the world
-                                    of front-end engineering and UX/UI design. No AI assisted Coding used for this project.
-                                </P>
-                                <div class="project-tech">
-                                    <img class="project-logo" src="images/skills_logos/html-logo.svg">
-                                    <img class="css-project-logo" src="images/skills_logos/css-logo.svg">
-                                    <img class="project-logo" src="images/skills_logos/git-icon.svg">
-                                    <a class="project-github" href="https://github.com/ta10g22/Tochi-Portfolio-V1" target="_blank" rel="noopener" aria-label="View source on GitHub">
-                                        <img src="images/skills_logos/github-logo.svg" alt="GitHub repository">
-                                    </a>
-                                </div>
-                        </div>
-                        <div class="project-card" >
-                            <h2> Tiny Infer - ML Compiler & Runtime (C++)</h2>
-                                <P>
-                                    A from-scratch C++ machine learning inference engine and compiler-style runtime. TinyInfer loads model weights, executes core
-                                    neural-network layers, applies graph-level optimisations, and benchmarks performance against PyTorch to explore how production
-                                    ML inference systems are built under the hood.
-                                </P>
-                                <div class="project-tech">
-                                    <img class="project-logo" src="images/skills_logos/c-plus-plus.svg">
-                                    <img class="project-logo" src="images/skills_logos/git-icon.svg">
-                                    <a class="project-github" href="https://github.com/ta10g22/TinyInfer" target="_blank" rel="noopener" aria-label="View source on GitHub">
-                                        <img src="images/skills_logos/github-logo.svg" alt="GitHub repository">
-                                    </a>
-                                </div>
-                        </div>
-                        <div class="project-card" >
-                            <h2> Mips Pipeline Simulator (C++)</h2>
-                                <p> Implememted a cycle-accurate 5-stage pipelined CPU with hazard dection unit for forwarding and stalls
-                                    and 2-bit saturating Branch predictor to reduce control-hazards. Validated on test programs written in MIPS assembly with 
-                                the limited ISA. Addition of the Branch predictor reduced Average CPI from 1.25. to 1.11 as the number of stalls reduced from
-                                403 to 203 on the showcase program.
-                                </p>
-                                <div class="project-tech">
-                                    <img class="project-logo" src="images/skills_logos/c-plus-plus.svg">
-                                    <img class="project-logo" src="images/skills_logos/git-icon.svg">
-                                    <a class="project-github" href="https://github.com/ta10g22/Mips_Computer_Pipeline_Simulator" target="_blank" rel="noopener" aria-label="View source on GitHub">
-                                        <img src="images/skills_logos/github-logo.svg" alt="GitHub repository">
-                                    </a>
-                                </div>
-                        </div>
+    <main id="main">
+        <section id="skills" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <ul class="skills-container">
+                <li><img src="images/skills_logos/logo-python.svg" alt="" width="56" height="56" loading="lazy"><span>Python</span></li>
+                <li><img src="images/skills_logos/c-plus-plus.svg" alt="" width="56" height="56" loading="lazy"><span>C++</span></li>
+                <li><img src="images/skills_logos/c-logo.svg" alt="" width="56" height="56" loading="lazy"><span>C</span></li>
+                <li><img class="wide-logo" src="images/skills_logos/systemverilog.svg" alt="" width="80" height="56" loading="lazy"><span>SystemVerilog</span></li>
+                <li><img src="images/skills_logos/git-icon.svg" alt="" width="56" height="56" loading="lazy"><span>Git</span></li>
+                <li><img src="images/skills_logos/html-logo.svg" alt="" width="56" height="56" loading="lazy"><span>HTML</span></li>
+                <li><img src="images/skills_logos/css-logo.svg" alt="" width="56" height="56" loading="lazy"><span>CSS</span></li>
+            </ul>
+        </section>
+
+        <section id="projects" aria-labelledby="software-title">
+            <h2 id="software-title">Software projects</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-heading">
+                        <h3>Tochi’s Portfolio V1</h3>
+                        <a class="project-github" href="https://github.com/ta10g22/Tochi-Portfolio-V1" target="_blank" rel="noopener noreferrer" aria-label="View Portfolio V1 source on GitHub">
+                            <img src="images/skills_logos/github-logo.svg" alt="" width="28" height="28" loading="lazy">
+                        </a>
                     </div>
-
-                <h1 class ="hardware-projects-title" > Hardware Projects</h1>
-                    <div class="project-grid">
-                        <div class ="project-card">
-                            <h2> Risc-V Sparse Matrix-Mul Accelerator (SV, C & Python)</h2>
-                            <p> Designed a custom Risc-v AI accelerator supporting ML workloads, vector instruction and ReLU extensions
-                                for efficient computation. Utilised DSP units on the FPGA to compute different rows of the matrix all in parralel and added runtime INT8 quantisation
-                                to reduce the Memory bandwidth bottle neck while maintaining it's precision. Achieved measured speed ups of up to 56.8x on a variety of sparse matrix workloads
-                                with different sizes, sparsity levels and patterns. and up to 11.92x speed up over the ARM cortex M0.
-                            </p>
-                            <div class="project-tech">
-                                <img class="verilog-project-logo" src="images/skills_logos/systemverilog.svg">
-                                <img class="project-logo" src="images/skills_logos/c-logo.svg">
-                                <img class="project-logo" src="images/skills_logos/logo-python.svg">
-                                <a class="project-github" href="https://github.com/ta10g22/RiscV-sparse-accel" target="_blank" rel="noopener" aria-label="View source on GitHub">
-                                    <img src="images/skills_logos/github-logo.svg" alt="GitHub repository">
-                                </a>
-                            </div>
-
-                        </div>
-                        <div class="project-card" >
-                            <h2> Group IC design & Test Project (SV)</h2>
-                                <p>This a Group project where i was responsible for design some circuits for a digital clock with provided requirements
-                                    such as a main sequencer, Button sequencer and Ring Oscillator.
-                                    EDA tools such as S-edit and L-edit where used to implement the circuit and LVS check were used to confirm not compatibility errors.
-                                    The GDSII file was sent to TSMC for Fabrication and after returned Custom Test Vectors were created to confirm there was no errors when
-                                    manufacturing the chip.
-                                </p>
-                                <div class="project-tech">
-                                    <img class="verilog-project-logo" src="images/skills_logos/systemverilog.svg">
-                                </div>
-                        </div>
-                        <div class="project-card" >
-                            <h2> Embedded Networked System Smart Lighting Project (C )</h2>
-                                <p>This a Group project where i was responsible for designing Standard Network Architecture for both the Application
-                                    and transport layers of an Embedded device with an RF Transceiver. Design the Byte structure of the payload and it's segments,
-                                    determining what control functionality we want for the smart lighting application, which ports segments should arrive in and what
-                                    type of checksum to ensure the segments/packets weren't corrupted.
-                                </p>
-                                <div class="project-tech">
-                                    <img class="project-logo" src="images/skills_logos/c-logo.svg">
-                                    <a class="project-github" href="https://github.com/ta10g22/Embedded-Smart-Lighting-Project" target="_blank" rel="noopener" aria-label="View source on GitHub">
-                                        <img src="images/skills_logos/github-logo.svg" alt="GitHub repository">
-                                    </a>
-                                </div>
-                        </div>
+                    <p>The first iteration of my personal website, built with HTML and CSS. A hobby project to explore front-end engineering and UI/UX design.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <img src="images/skills_logos/html-logo.svg" alt="HTML" width="40" height="40" loading="lazy">
+                        <img src="images/skills_logos/css-logo.svg" alt="CSS" width="40" height="40" loading="lazy">
+                        <img src="images/skills_logos/git-icon.svg" alt="Git" width="40" height="40" loading="lazy">
                     </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-heading">
+                        <h3>TinyInfer — ML compiler &amp; runtime</h3>
+                        <a class="project-github" href="https://github.com/ta10g22/TinyInfer" target="_blank" rel="noopener noreferrer" aria-label="View TinyInfer source on GitHub">
+                            <img src="images/skills_logos/github-logo.svg" alt="" width="28" height="28" loading="lazy">
+                        </a>
+                    </div>
+                    <p>A C++ machine learning inference engine and compiler-style runtime built from scratch. TinyInfer loads model weights, executes neural-network layers, applies graph-level optimisations, and benchmarks performance against PyTorch to explore how production ML inference systems work.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <img src="images/skills_logos/c-plus-plus.svg" alt="C++" width="40" height="40" loading="lazy">
+                        <img src="images/skills_logos/git-icon.svg" alt="Git" width="40" height="40" loading="lazy">
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-heading">
+                        <h3>MIPS pipeline simulator</h3>
+                        <a class="project-github" href="https://github.com/ta10g22/Mips_Computer_Pipeline_Simulator" target="_blank" rel="noopener noreferrer" aria-label="View MIPS simulator source on GitHub">
+                            <img src="images/skills_logos/github-logo.svg" alt="" width="28" height="28" loading="lazy">
+                        </a>
+                    </div>
+                    <p>A cycle-accurate five-stage pipelined CPU with hazard detection for forwarding and stalls, plus a two-bit saturating branch predictor. Validated with MIPS assembly programs. The branch predictor reduced average CPI from 1.25 to 1.11 and stalls from 403 to 203 on the showcase program.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <img src="images/skills_logos/c-plus-plus.svg" alt="C++" width="40" height="40" loading="lazy">
+                        <img src="images/skills_logos/git-icon.svg" alt="Git" width="40" height="40" loading="lazy">
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
-    <section id="contact">
-         <div class="contact-container" >
-                <h3> Contact me</h1>
-                    <p class="contact-message"> I always check my messages, Let's talk!</p>
-                <div class="contact-plane">
-                    <img class="project-logo" src="images/contact_logos/email-logo.svg"> 
-                    <p class="contact-info"> tochipartnerships@gmail.com</p>
-                </div>
-                 <div class="contact-plane">
-                    <img class="project-logo" src="images/contact_logos/location.svg"> 
-                    <p class="contact-info"> London, United Kingdom</p>
-                </div>
 
-                <form class="contact-form">
+            <h2 class="hardware-projects-title" id="hardware-title">Hardware projects</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-heading">
+                        <h3>RISC-V sparse matrix-multiplication accelerator</h3>
+                        <a class="project-github" href="https://github.com/ta10g22/RiscV-sparse-accel" target="_blank" rel="noopener noreferrer" aria-label="View RISC-V accelerator source on GitHub">
+                            <img src="images/skills_logos/github-logo.svg" alt="" width="28" height="28" loading="lazy">
+                        </a>
+                    </div>
+                    <p>A custom RISC-V AI accelerator supporting ML workloads, vector instructions, and ReLU extensions. FPGA DSP units compute matrix rows in parallel, while runtime INT8 quantisation reduces memory bandwidth demands. Measured speedups reached 56.8× across sparse matrix workloads and 11.92× over the ARM Cortex-M0.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <img class="wide-logo" src="images/skills_logos/systemverilog.svg" alt="SystemVerilog" width="72" height="40" loading="lazy">
+                        <img src="images/skills_logos/c-logo.svg" alt="C" width="40" height="40" loading="lazy">
+                        <img src="images/skills_logos/logo-python.svg" alt="Python" width="40" height="40" loading="lazy">
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-heading">
+                        <h3>Group IC design &amp; test project</h3>
+                    </div>
+                    <p>Designed circuits for a digital clock, including a main sequencer, button sequencer, and ring oscillator. Used S-Edit and L-Edit to implement the circuits and LVS checks to verify the layout. The GDSII file was sent to TSMC for fabrication, then custom test vectors were used to validate the manufactured chip.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <img class="wide-logo" src="images/skills_logos/systemverilog.svg" alt="SystemVerilog" width="72" height="40" loading="lazy">
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-heading">
+                        <h3>Embedded smart lighting system</h3>
+                        <a class="project-github" href="https://github.com/ta10g22/Embedded-Smart-Lighting-Project" target="_blank" rel="noopener noreferrer" aria-label="View smart lighting source on GitHub">
+                            <img src="images/skills_logos/github-logo.svg" alt="" width="28" height="28" loading="lazy">
+                        </a>
+                    </div>
+                    <p>Designed the application and transport layers for an embedded device with an RF transceiver. Defined the payload’s byte structure, control functions, destination ports, and checksum to detect corrupted packets.</p>
+                    <div class="project-tech" aria-label="Technologies used">
+                        <img src="images/skills_logos/c-logo.svg" alt="C" width="40" height="40" loading="lazy">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-title">
+            <div class="contact-container">
+                <div class="contact-details">
+                    <h2 id="contact-title">Contact me</h2>
+                    <p class="contact-message">Have a project in mind or want to talk? Let’s get in touch.</p>
+                    <a class="contact-plane" href="mailto:tochipartnerships@gmail.com">
+                        <img src="images/contact_logos/email-logo.svg" alt="" width="28" height="28" loading="lazy">
+                        <span>tochipartnerships@gmail.com</span>
+                    </a>
+                    <p class="contact-plane">
+                        <img src="images/contact_logos/location.svg" alt="" width="28" height="28" loading="lazy">
+                        <span>London, United Kingdom</span>
+                    </p>
+                </div>
+                <form class="contact-form" action="mailto:tochipartnerships@gmail.com" method="post" enctype="text/plain">
                     <div class="form-row">
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="text" name="email" placeholder="Email">
+                        <div class="form-field">
+                            <label for="contact-name">Name</label>
+                            <input id="contact-name" type="text" name="name" placeholder="Your name" autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-email">Email</label>
+                            <input id="contact-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                        </div>
                     </div>
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="message" placeholder="Message"></textarea>
-                        <button type="submit">Submit</button>
+                    <div class="form-field">
+                        <label for="contact-subject">Subject</label>
+                        <input id="contact-subject" type="text" name="subject" placeholder="What would you like to talk about?" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="Tell me a little more…" rows="5" required></textarea>
+                    </div>
+                    <button class="cta-button" type="submit">Open email draft</button>
+                    <p class="form-note">This opens your email app with your message, ready to send.</p>
                 </form>
-        </div>
-    </section>
-       
+            </div>
+        </section>
+    </main>
+    <footer><p>Tochi Anyanwu · Software, ML &amp; hardware</p></footer>
 </body>
 </html>
